@@ -9,7 +9,7 @@ services:
     startCommand: "gunicorn vsms.wsgi:application"
     envVars:
       - key: PYTHON_VERSION
-        value: 3.10.0
+        value: 3.10.12
       - key: DEBUG
         value: "False"
       - key: SECRET_KEY
