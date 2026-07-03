@@ -1,0 +1,123 @@
+.video-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 120px;
+  border-radius: 10px;
+}
+
+.video-form {
+  width: 500px;
+  max-width: 100%;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 0px 400px;
+  backdrop-filter: blur(30px);
+  font-family: 'Arial', sans-serif;
+}
+
+.video-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.video-form-group {
+  margin-bottom: 10px;
+}
+
+.video-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.video-form input[type="text"],
+.video-form input[type="date"],
+.video-form input[type="file"],
+.video-form button {
+  width: calc(100% - 10px);
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #7a7a7a;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+}
+
+.video-form input[type="file"] {
+  padding: 12px 0;
+  border: 1px solid #7a7a7a;
+}
+
+.video-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.video-form button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .video-form {
+    width: 100%;
+  }
+}
+
+.message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.message.success {
+  color: rgb(0, 191, 0);
+  border: 1px solid rgb(2, 151, 2);
+  background-color: #d4edda;
+}
+
+.message.error {
+  color: red;
+  border: 1px solid red;
+  background-color: #f8d7da;
+}
+
+.message p {
+  margin: 0;
+}
+
+.video-form .close-button-video {
+  background-color: #c9d5fd;
+  color: rgb(16, 14, 14);
+  border: none;
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 350px;
+  transition: background-color 0.3s;
+}
+
+.close-button-video:hover {
+  background-color: #d32f2f;
+}

@@ -1,0 +1,125 @@
+/* Adminreg.css */
+
+.adminreg-container {
+  /* Light background color for the entire page */
+   font-family: Arial, sans-serif;
+   height: 100vh;
+ }
+ 
+ .adminreg-card {
+   border-radius: 25px;
+   background-color: #fff;
+   height: 550px;
+   width: 900px;
+   margin-left: 30px;
+   margin-top: 30px;
+ }
+ 
+ .adminreg-card-body {
+   padding: 20px;
+  
+ }
+ 
+ .adminreg-heading {
+   text-align: center;
+   font-size: 2rem;
+   font-weight: bold;
+   margin-bottom: 10px
+ }
+ 
+ .adminreg-form {
+   width: 100%;
+ }
+ 
+ .adminreg-form-group {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+   
+   
+ }
+ .adminreg-form-group input[type="email"] {
+  width: 100%;
+ }
+ .adminreg-form-group label {
+  width: 350px;
+ }
+ 
+ .adminreg-icon {
+   color: #007bff;
+   margin-right: 1rem;
+ }
+ 
+ .adminreg-input {
+   border-radius: 0.5rem;
+   border: 1px solid #ced4da;
+   padding: 0.5rem;
+   width: 100%;
+ }
+ 
+ .adminreg-input:focus {
+   border-color: #007bff;
+   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+ }
+ 
+ .adminreg-checkbox {
+   margin-right: 0.5rem;
+ }
+ 
+ .adminreg-checkbox-label {
+   margin-left: 0.5rem;
+ }
+ 
+ .adminreg-button1 {
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 0.5rem;
+   padding: 0.75rem 1.5rem;
+   font-size: 1rem;
+   cursor: pointer;
+   width: 350px;
+   margin-left: 30px;
+ }
+ 
+ .adminreg-button:hover {
+   background-color: #0056b3;
+ }
+ 
+ .adminreg-link {
+   color: #007bff;
+   text-decoration: none;
+ }
+ 
+ .adminreg-link:hover {
+   text-decoration: underline;
+ }
+ 
+ .adminreg-image {
+   border-radius: 1rem;
+ }
+ 
+ .adminreg-order-lg-1 {
+   order: 1;
+ }
+ 
+ .adminreg-order-lg-2 {
+   order: 2;
+ }
+ 
+ .adminreg-flex {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .adminreg-flex-column {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ 
+ .text-center{
+   margin-top: 20px;
+ 
+ }
+ 

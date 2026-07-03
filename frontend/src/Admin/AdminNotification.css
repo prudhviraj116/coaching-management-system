@@ -1,0 +1,82 @@
+/* Container for the notifications page */
+.notification-pages {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #4375a721; /* Light background for a clean look */
+}
+
+/* Header styling */
+.page-headers {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-headers h1 {
+  color: #343a40; /* Dark text for high contrast */
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Loading and error message styling */
+.loading-container, .error-container {
+  text-align: center;
+  font-size: 18px;
+  color: #495057;
+  padding: 20px;
+  background-color: #ffffff46; /* White background for readability */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin-bottom: 20px;
+}
+
+/* List of notifications styling */
+.notifications-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notification-cards {
+  background-color: #ffffff2f; /* White background for cards */
+  border: 1px solid #dee2e6; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.notification-cards:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  transform: translateY(-5px); /* Slightly lift the card */
+}
+
+.notification-headers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.notification-titles {
+  font-size: 20px;
+  color: #343a40; /* Dark text */
+  margin: 0;
+}
+
+.notification-dates {
+  font-size: 14px;
+  color: #868e96; /* Light gray for dates */
+}
+
+.notification-bodys p {
+  margin: 5px 0;
+  color: #495057; /* Dark text for readability */
+}
+
+/* Styling for when no notifications are available */
+.no-notifications {
+  text-align: center;
+  color: #868e96;
+  font-size: 18px;
+}

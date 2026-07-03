@@ -1,0 +1,106 @@
+.registration-form-container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  color: black;
+  background-color: #f0f0f0;
+}
+
+.registration-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.registration-form1 {
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(120, 53, 54, 0.274);
+  background-color: white;
+  text-align: center;
+}
+
+.form-row1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-group11 {
+  flex: 1;
+}
+
+.form-group11 label {
+  margin-top: 5px;
+  display: block;
+  font-weight: bold;
+  text-align: start;
+  font-size: small;
+}
+
+.form-group11 input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.gender-group1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.gender-options1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.gender-options1 label {
+  display: flex;
+  align-items: center;
+}
+
+.gender-options1 input {
+  margin-right: 5px;
+}
+
+.registration-form1 button {
+  width: 100%;
+  padding: 10px;
+  background: #3d27e4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 10px; /* Add margin-bottom for spacing between buttons */
+}
+
+.registration-form1 button:hover {
+  background: #3a5ee1;
+}
+
+.sign-in-text1 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.sign-in-text1 a {
+  color: #0404e3;
+  text-decoration: none;
+}
+
+.sign-in-text1 a:hover {
+  text-decoration: underline;
+}

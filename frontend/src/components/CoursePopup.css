@@ -1,0 +1,137 @@
+/* ==========================================================================
+   CoursePopup.css - Elite Modal Overlay
+   ========================================================================== */
+
+.course-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.course-popup {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-focus);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-glow);
+  position: relative;
+  animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--text-secondary);
+}
+
+.course-popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.course-popup-close:hover {
+  background: #ef4444; /* Bright red on hover */
+  color: white;
+  border-color: #ef4444;
+  transform: rotate(90deg);
+}
+
+.course-popup-image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 24px;
+  border: 1px solid var(--border-subtle);
+}
+
+.course-popup h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.course-popup p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.course-popup h3 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.course-popup ul {
+  padding-left: 20px;
+  list-style: none; /* We will use custom bullets */
+  margin: 0;
+}
+
+.course-popup li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  color: var(--text-secondary);
+}
+
+.course-popup li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+/* Scrollbar styling for modal */
+.course-popup::-webkit-scrollbar {
+  width: 8px;
+}
+
+.course-popup::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.course-popup::-webkit-scrollbar-thumb {
+  background-color: var(--border-subtle);
+  border-radius: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  .course-popup {
+    padding: 20px;
+  }
+}

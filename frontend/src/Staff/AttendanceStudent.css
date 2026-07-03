@@ -1,0 +1,97 @@
+/* BatchFormStyles.css */
+
+.batch-form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .batch-form-container h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  
+  .batch-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .batch-form-container label {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .batch-form-container input[type="text"] {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .batch-form-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .batch-form-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .batch-table-container {
+    margin-top: 20px;
+  }
+  
+  .batch-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+  
+  .batch-table-container th, .batch-table-container td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  .batch-table-container th {
+    background-color: #f2f2f2;
+  }
+
+  .Dashbord_css{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+    background-color: #ddd;
+    position:absolute ;
+    left: 450px;
+    top: 100px;
+    
+  }
+
+
+  .action-button.green {
+    background-color: green;
+  }
+  
+  .action-button.red {
+    background-color: red;
+  }
+  
+  .action-button.absent {
+    background-color: red; /* Default color */
+  }
+  
+
+   
+  

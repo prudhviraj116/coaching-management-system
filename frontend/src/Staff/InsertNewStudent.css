@@ -1,0 +1,134 @@
+.cont{
+    display:flex;
+    flex: 1;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    max-width: 900px;
+    box-shadow: 0 3px 6px rgba(12, 12, 12, 0.607);
+    overflow: hidden;
+    position: absolute;
+    left: 400px;
+    top: 100px;
+    border-radius: 5px;
+    backdrop-filter: blur(100px);
+    
+}
+.student-form-containers {
+  max-width: 700px;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.student-form-rows {
+  margin-bottom: 15px;
+}
+
+.student-form-rows label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color:black;
+}
+
+.student-form-rows input[type="text"],[type="email"],
+.student-form-rows select {
+  width: 450px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.student-form-rows input[type="number"] {
+  width: 450px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.student-form-rows input {
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+
+}
+
+.student-form-rows input[type="submit"]:hover {
+  background-color: #45a049;
+}
+.student-form-rows button{
+  
+  border-radius: 5px;
+  width: 150px;
+
+}
+
+
+
+.form-sections{
+  display: flex;
+  gap: 80px;
+  margin-left: 60px;
+}
+.form-section1{
+  background-color: whitesmoke;
+  box-shadow: #ccc;
+
+  
+}
+
+/* InsertNewStudent.css */
+
+/* Common styling for message boxes */
+.message {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+
+}
+.message p{
+  margin-right: 50px;
+}
+
+/* Styling for success message */
+.success-message {
+  background-color: #d4edda; /* Light green background */
+  color: #116424; /* Dark green text */
+  border: 1px solid #c3e6cb; /* Light green border */
+}
+
+/* Styling for error message */
+.error-message {
+  background-color: #f8d7da; /* Light red background */
+  color: #d41e30; /* Dark red text */
+  border: 1px solid #f5c6cb; /* Light red border */
+}
+
+
+.close-button-is{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #00000000;
+  color: #000000;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.close-button-is:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+

@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Home.css - Parallax Hero & 3D Interactive Grid
+   ========================================================================== */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ── Parallax Hero Section ── */
+.hero-section {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  margin-bottom: 80px;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-background {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  background: linear-gradient(to bottom right, #0f172a, rgba(16, 185, 129, 0.2)), url('../assets/team.jpg') center/cover no-repeat;
+  z-index: 1;
+  filter: brightness(0.4) saturate(1.2);
+  will-change: transform; /* Optimize parallax */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-badge {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--accent-primary);
+  padding: 8px 16px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-glow);
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0;
+  color: #fff;
+}
+
+.text-accent {
+  color: var(--accent-primary);
+  background: linear-gradient(135deg, var(--accent-primary), #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+/* ── 3D Interactive Features Grid ── */
+.features-section {
+  padding: 40px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  perspective: 1000px; /* Enable 3D space */
+}
+
+.feature-card3d {
+  background-color: transparent;
+  height: 450px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  animation: slideUpFade 0.8s ease-out backwards;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s ease;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.feature-card3d:hover .card-inner {
+  transform: translateY(-15px) rotateX(5deg) rotateY(-5deg);
+  box-shadow: -20px 20px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(16, 185, 129, 0.2);
+  border-color: var(--border-focus);
+}
+
+.card-image-wrapper {
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.feature-card3d:hover .card-image-wrapper img {
+  transform: scale(1.1); /* Subtle zoom on hover */
+}
+
+.card-content {
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.2));
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  transition: color var(--transition-fast);
+}
+
+.feature-card3d:hover .card-content h3 {
+  color: var(--accent-primary);
+}
+
+.card-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-actions button {
+    width: 100%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+  }
+}

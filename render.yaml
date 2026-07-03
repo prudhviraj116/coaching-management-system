@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: vsms-backend
+    env: python
+    region: ohio
+    plan: free
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt && python manage.py migrate"
+    startCommand: "gunicorn vsms.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        value: "vsms-backend.onrender.com"
+      - key: CORS_ALLOWED_ORIGINS
+        value: "https://your-frontend-app.vercel.app"
+      - key: CORS_ALLOW_ALL_ORIGINS
+        value: "False"
+      - key: DB_NAME
+        value: "vcubedb"
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_HOST
+        sync: false
+      - key: EMAIL_HOST_USER
+        sync: false
+      - key: EMAIL_HOST_PASSWORD
+        sync: false

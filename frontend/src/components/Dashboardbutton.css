@@ -1,0 +1,16 @@
+/* src/components/DashboardButton.css */
+
+.dashboard-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Example background color */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard-button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+  }
+  

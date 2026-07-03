@@ -1,0 +1,262 @@
+/* AttendanceUpdate.css */
+
+.popup001 {
+    top:95px;
+    display:flex;
+    height: auto;
+    overflow: hidden;
+    position:absolute;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  .attendance-page1 {
+     /* Space from the top for the fixed buttons */
+     min-height: 100px;
+     width: 100%;
+     backdrop-filter: blur(35px);
+     background-color: whitesmoke;
+  
+  }
+  
+  .buttons1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    
+  }
+  
+  .buttons1 button {
+    padding: 20px 15px;
+    font-size: 16px;
+    background-color: #0930f1c4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+  }
+  
+  .buttons1 button:hover {
+    background-color: #061b93; /* Darker shade on hover */
+  }
+  
+  
+  .input_attendance1 {
+    margin-top: 60px; /* Space between buttons and form */
+    
+  }
+  .input_attendance1 input[type='text'] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 35%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .input_attendance1 .button {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #5a83f5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input_attendance1 .button:hover {
+    background-color: #3949fd;
+  }
+  
+  /* Filter */
+  .filter1 {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    margin-left: 400px;
+    margin-left: 68%;
+    margin-top: -20px;
+  }
+  
+  .filter1 input[type='text'] {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+   
+  .filter1 button {
+    padding: 8px 20px;
+    margin-top: -14px;
+    font-size: 16px;
+    background-color: #5a83f5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter1 button:hover {
+    background-color: #3949fd;
+  }
+  
+  /* Table Container */
+  .table-container1 {
+    margin-top: 50px;
+    overflow-x: auto;
+  }
+  
+  .table-container1 table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .table-container1 table th,
+  .table-container1 table td {
+    border: 1px solid #141313;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .table-container1 table th {
+    background-color: #0930f1c4;
+    color: black;
+  }
+  
+  .table-container1 table tbody tr:nth-child(even) {
+    background-color: #84a2f6b1;
+  }
+  
+  /* Action Button */
+  .table-container1 table td button {
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .table-container1 table td button:hover {
+    background-color: #c82333;
+  }
+  
+  .action-button {
+    width: 35px;
+    height: 30px;
+    color: #4CAF50;
+  }
+  
+  /* Session Form */
+  .sheet1 {
+    margin-top: 30px;
+    
+    background-color: whitesmoke;
+    border-radius: 5px;
+    width: 97%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .date_input {
+    margin-top: 50px;
+    margin-right: 100px;
+  }
+  
+  .session-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .section{
+    width: 16%;
+    margin-left: 120px;
+    margin-top: -20px;
+  }
+  
+  
+  input.class[type='text'],
+  input.class[type='date'],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button.submit {
+    width: 280px;
+    height: 50px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-left: 20%;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.submit[type='submit'] {
+    background-color: rgba(255, 68, 0, 0.822);
+  }
+  
+  button.submit[type='submit']:hover {
+    background-color: rgba(255, 68, 0, 0.784);
+  }
+  
+  button.submit[type='button'] {
+    background-color: #dc3545;
+  }
+  button.submit[type='button']:hover {
+    background-color: #c82333;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .session-form {
+      padding: 15px;
+      width: 100%;
+      max-width: none;
+   }
+  }
+  
+  
+  
+  

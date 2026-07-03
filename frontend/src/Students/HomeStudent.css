@@ -1,0 +1,48 @@
+/* Flexbox layout for the wrapper */
+.student-wrapper {
+  display: flex;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevents content from overflowing the viewport */
+}
+
+/* Styles for the sidebar */
+.student-sidebar {
+  width: 250px; /* Width of the sidebar */
+  background-image: url('../assets/images/snackverse-01.jpg');
+  background-size: cover;
+  color: #fff;
+  padding: 20px;
+  position: fixed; /* Fixed position for the sidebar */
+  left: 0; /* Align to the left side of the viewport */
+  top: 0; /* Align to the top of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  z-index: 100; /* Ensure sidebar stays above content */
+  overflow-y: auto; /* Allows the sidebar content to scroll if it overflows */
+}
+
+/* Styles for the main content area */
+.student-main-content {
+  margin-left: 250px; /* Offset for the sidebar width */
+  padding: 20px;
+  flex: 1; /* Flexible width to take up remaining space */
+  overflow-y: auto; /* Allows content to scroll if it overflows */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .student-wrapper {
+    flex-direction: column; /* Stack sidebar and main content vertically on smaller screens */
+  }
+  
+  .student-sidebar {
+    width: 100%; /* Take full width on smaller screens */
+    position: static; /* Reset position for smaller screens */
+    height: auto; /* Adjust height if necessary */
+    margin: 0; /* Remove margin for smaller screens */
+    background-size: auto; /* Adjust background size if necessary */
+  }
+
+  .student-main-content {
+    margin-left: 0; /* Remove margin for smaller screens */
+  }
+}

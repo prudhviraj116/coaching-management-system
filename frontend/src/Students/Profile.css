@@ -1,0 +1,108 @@
+/* Profile.css */
+
+/* Main container for UserProfile component */
+.profile-main-container {
+  display: flex;
+  justify-content: space-between; /* To create space between the two containers */
+  padding: 20px; /* Adding padding for spacing */
+  max-width: 1200px; /* Example max-width for the main container */
+  margin: 0 auto; /* Centering the main container */
+  color: black;
+}
+
+/* Styling for the form section (right side) */
+.continer000 {
+  flex: 1; /* Take remaining space */
+  padding: 20px;
+}
+
+/* Styling for the profile preview section (left side) */
+.continer111 {
+  width: 350px;
+  position: sticky;
+  top: 20px; /* Adjusted from 60px to ensure better stickiness */
+  height: fit-content; /* Adjust height based on content */
+  max-height: 100vh; /* Prevent overflow beyond viewport */
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #6f28f3f0;
+  border-radius: 8px; /* Slightly larger border-radius for a smoother look */
+}
+
+/* Styling for profile preview content */
+.profile-preview {
+  text-align: center; /* Center align content */
+}
+
+/* Styling for the profile image */
+.profile-image {
+  width: 150px; /* Increased size for better visibility */
+  height: 150px; /* Ensuring aspect ratio matches width */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin-bottom: 15px; /* Space between image and text */
+}
+
+.continer111 h2 {
+  margin-top: 10px; /* Space above the heading */
+  color: white;
+}
+
+.continer111 .username {
+  font-weight: bold;
+  color: white;
+}
+
+.continer111 .about-me {
+  font-style: italic;
+  color: white;
+}
+
+/* Basic styling for form elements */
+.user-profile-form {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-grouplabel {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-groupinput-field {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-grouptextarea-field {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 100px;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}

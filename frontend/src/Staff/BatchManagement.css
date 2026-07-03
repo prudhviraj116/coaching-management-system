@@ -1,0 +1,142 @@
+.batch-management {
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    height: auto; /* Adjust height to fit content */
+    max-height: 180vh; /* Limit height to 80% of viewport height */
+    padding: 20px;
+    backdrop-filter: blur(100px);
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Larger shadow for a modern effect */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Remove overflow */
+}
+
+.close-button-man {
+    background: none;
+    border: none;
+    font-size: 36px;
+    color: #0c0c0c; /* Close button color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    align-self: flex-end; /* Align to the right */
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.close-button-man:hover {
+   background: #0c0c0c00;
+}
+
+
+.form-section h3 {
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #28a745; /* Green background */
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.message {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.message.success {
+    color: #28a745; /* Green for success */
+}
+
+.message.error {
+    color: #dc3545; /* Red for error */
+}
+
+.batch-list {
+    background-color: #78c0c0; /* Light gray background for the batch list */
+    border: 1px solid #06f7fb9c;
+    border-radius: 6px;
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 300px; /* Limit the height and make it scrollable if needed */
+    margin-top: 20px;
+}
+
+.batch-list h3 {
+    margin-top: 0;
+    color: #333333;
+    font-size: 18px;
+}
+
+.batch-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.batch-list li {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.batch-list a {
+    text-decoration: none;
+    color: #0f1010;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.batch-list a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .batch-management {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .form-group input[type="text"] {
+        width: 100%;
+    }
+}
