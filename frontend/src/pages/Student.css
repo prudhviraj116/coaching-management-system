@@ -1,0 +1,115 @@
+.student-login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ /* Hide overflow to prevent scrollbars */
+  
+}
+
+.student-login-section {
+  background: #ffffff; /* White background for the login section */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-50px); /* Initial state for animation */
+  animation: studentSlideIn 0.5s forwards; /* Slide-in animation */
+  
+}
+
+@keyframes studentSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.student-image-block {
+  margin-bottom: 20px;
+}
+
+.student-side-image {
+  width: 100%;
+  max-width: auto; /* Adjusted image size */
+  border-radius: 5px;
+  height: 100px;
+}
+
+.student-login-section h2 {
+  margin-bottom: 20px;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+}
+
+.student-input-container {
+  margin-bottom: 20px;
+}
+
+.student-input-container input {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.student-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.student-options a {
+  text-decoration: none;
+  color: #007bff; /* Blue color for links */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.student-login-button,
+.student-create-account-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.student-login-button {
+  background-color: #e06b04; /* Green background color for login button */
+  color: white;
+  margin-bottom: 10px;
+}
+
+.student-create-account-button {
+  background-color: #f58d06; /* Blue background color for create account button */
+  color: white;
+}
+
+.student-login-button:hover,
+.student-create-account-button:hover {
+  opacity: 0.9;
+}
+
+.student-login-button:active,
+.student-create-account-button:active {
+  transform: translateY(1px);
+}
+.forgot-password-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+

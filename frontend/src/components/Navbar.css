@@ -1,0 +1,111 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.navbar-links.active {
+  max-height: 500px; /* Adjust as needed for your content */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color:orange;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content .dropdown-link {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.dropdown-content .dropdown-link:hover {
+  background-color: #575757;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: block;
+    max-height: 0;
+  }
+
+  .navbar-links.active {
+    max-height: 500px; /* Adjust as needed for your content */
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 10px;
+  }
+}

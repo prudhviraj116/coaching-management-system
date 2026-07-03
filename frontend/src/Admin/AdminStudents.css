@@ -1,0 +1,227 @@
+/* General page styling */
+.batch-student-page {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #f9f9f9; /* Light background color for the whole page */
+}
+
+/* Heading styling */
+.batch-student-page h1 {
+  text-align: center;
+  color: #2c3e50; /* Darker color for better readability */
+  font-size: 2.5em; /* Larger font size for emphasis */
+  margin-bottom: 20px;
+}
+
+/* Batch list container */
+.batch-list {
+  margin-bottom: 30px; /* Increased margin for spacing */
+}
+
+.batch-list h2 {
+  font-size: 1.8em; /* Slightly larger font size */
+  color: #34495e; /* Darker color for better contrast */
+  margin-bottom: 15px;
+}
+
+.batch-list ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Increased gap for better spacing */
+  justify-content: center;
+}
+
+.batch-list li {
+  margin: 5px;
+}
+
+.batch-button {
+  padding: 12px 24px; /* Increased padding for a better button appearance */
+  border: none;
+  border-radius: 6px; /* Slightly rounded corners */
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px; /* Larger font size for buttons */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.batch-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Students container styling */
+.students-container {
+  margin-top: 30px; /* Increased margin for better spacing */
+}
+
+/* Filter container styling */
+.filter-container {
+  margin: 30px 0; /* Increased margin for spacing */
+}
+
+.filter-container h3 {
+  margin-bottom: 15px;
+  font-size: 1.4em; /* Larger font size for filter headings */
+  color: #2c3e50; /* Consistent heading color */
+}
+
+.filter-select {
+  padding: 10px;
+  border: 1px solid #ccc; /* Softer border color */
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff; /* White background for the select box */
+}
+
+/* Data table styling */
+.student-data-table {
+  margin-top: 30px; /* Increased margin for better spacing */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+  background-color: #fff; /* White background for the table */
+  border-radius: 8px; /* Rounded corners for table container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for table container */
+}
+
+.student-data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-data-table th, .student-data-table td {
+  border: 1px solid #ddd;
+  padding: 14px; /* Slightly increased padding for table cells */
+  text-align: left;
+}
+
+.student-data-table th {
+  background-color: #4646f7;
+  color: white; /* Darker color for table headers */
+  font-weight: bold;
+}
+
+.student-data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.student-data-table tr:hover {
+  background-color: #e9e9e9; /* Slightly different hover color */
+}
+
+/* Error message styling */
+.error-message {
+  color: #d9534f; /* Changed to a softer red */
+  font-weight: 600; /* Slightly less bold */
+  text-align: center;
+  margin-top: 30px; /* Increased margin for better spacing */
+  font-size: 18px; /* Larger font size for better readability */
+}
+
+
+/* AdminStudents.css */
+
+.additional-students-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.additional-students-container h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.additional-student-data-table {
+  margin-top: 15px;
+}
+
+.additional-student-data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.additional-student-data-table th, .additional-student-data-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.additional-student-data-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.additional-student-data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.additional-student-data-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.error-message {
+  color: red;
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.loading-message {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+}
+
+
+
+/* AdminStudents.css */
+
+/* Container for toggle buttons */
+.table-toggle-buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Base style for toggle buttons */
+.table-toggle-buttons .toggle-button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #007bff; /* Highlight color for the active button */
+  color: #333;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  text-align: center;
+  flex: 1; /* Buttons will be equal width */
+}
+
+/* Style for active button */
+.table-toggle-buttons .toggle-button.active {
+  background-color: #007bff; /* Highlight color for the active button */
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Hover effect for buttons */
+.table-toggle-buttons .toggle-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Focus effect for accessibility */
+.table-toggle-buttons .toggle-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}

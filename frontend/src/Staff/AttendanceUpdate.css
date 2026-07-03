@@ -1,0 +1,155 @@
+/* AttendanceUpdate.css */
+
+.popup10 {
+    top:90px;
+    display:flex;
+    height: auto;
+    overflow: hidden;
+    position:absolute;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+  .attendance-page {
+     /* Space from the top for the fixed buttons */
+     min-height: 100px;
+     width: 100%;
+     background-color: white;
+
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    
+  }
+  
+  .buttons button {
+    padding: 20px 15px;
+    font-size: 16px;
+    background-color: #1657ed;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+  }
+  
+  .input_attendance {
+    margin-top: 60px; /* Space between buttons and form */
+  }
+  
+  .sheet {
+    margin-top: 30px;
+    /*Spacebetweenformandtable*/border: 1px solid orange;
+    background-color: whitesmoke;
+    border-radius:5px;
+    width: 97%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+  
+  .input_attendance input[type='text'] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .input_attendance .button {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #5a83f5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input_attendance .button:hover {
+    background-color: #3949fd;
+  }
+  
+  .filter {
+    width: 25%;
+    position: absolute;
+    top: 235px;
+    right: 60px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter input[type='text'] {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  .filter button {
+    padding: 8px 20px;
+    font-size: 16px;
+    background-color: #5a83f5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter button:hover {
+    background-color: #3949fd;
+  }
+
+  
+  .table-container {
+    margin-top: 70px; 
+    overflow-x: auto;
+   
+  }
+  
+  table {
+    width: 95%;
+    border-collapse: collapse;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid #141313;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #0930f1c4;
+    color:black;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #84a2f6b1;
+  }
+  table td button {
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #dc3546cf;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  table td button:hover {
+    background-color: #c82333;
+  }
+  

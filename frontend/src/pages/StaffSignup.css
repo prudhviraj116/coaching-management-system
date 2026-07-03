@@ -1,0 +1,232 @@
+.registration-form-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 86vh;
+  max-width: 1000px;
+  box-shadow: 0 3px 6px rgba(248, 40, 3, 0.607);
+  overflow: hidden;
+  background-color: #ddd;
+  position: absolute;
+  left: 300px;
+  top: 50px;
+  
+  
+  
+  
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.image-section img {
+  width: 360px;
+  height: 100%;
+  border-radius: 5px;
+  
+  
+}
+
+.registration-form {
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  overflow: hidden;
+  border-right: 50px;
+  position:relative;
+  border-radius: 5px;
+  padding-bottom: 20px;
+
+}
+
+.registration-form h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom:20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom:0px;
+  font-weight: bold;
+  text-align: start;
+  font-size: small;
+  margin-left:10px;
+  
+}
+
+.form-group input {
+  width: 90%;
+  padding:1px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  justify-content:start;
+  border-color: rgba(246, 185, 185, 0.881);
+  
+
+}
+.form-group1 select{
+border-color: rgba(246, 185, 185, 0.881);
+
+}
+
+.gender-group {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.gender-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top:6px;
+  margin-bottom: 10px;
+  
+  
+}
+
+.gender-options label {
+  display: flex;
+  align-items: center;
+  
+}
+
+.gender-options input {
+  margin-right: 3px;
+}
+
+.registration-form button {
+  width: 100%;
+  padding: 5px;
+  background:#f58403;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  padding-top: 5px;
+}
+
+.registration-form button:hover {
+  background: #fe9721;
+}
+
+.sign-in-text {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.sign-in-text a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.sign-in-text a:hover {
+  text-decoration: underline;
+}
+
+.form-group1{
+  width: 100px;
+  padding-left: 10px;
+  text-align: start;
+  font-weight: bold;
+  font-size: small;
+}
+.form-group1 select{
+    width: 200px;
+    padding:6px;
+    
+
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: small;
+
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Example of a fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply animation to specific elements */
+.image-section img {
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+.registration-form {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Example of hover effect with transition */
+button[type="submit"] {
+  background-color: #f75c36;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e15e06;
+}
+
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to the form container */
+.registration-form-container {
+  animation: slideInFromTop 0.5s ease-in-out;
+}

@@ -1,0 +1,289 @@
+/* ==========================================================================
+   HomeMainDashboard CSS - Central Layout Shell
+   ========================================================================== */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: margin-left var(--transition-smooth);
+  background-color: var(--bg-obsidian);
+}
+
+/* ── Floating Glass Navbar ── */
+.navbar {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  padding: 0 24px;
+  height: 70px;
+  width: calc(100% - 260px); /* Sidebar width */
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 260px;
+  transition: all var(--transition-smooth);
+  box-sizing: border-box;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: color var(--transition-fast);
+}
+
+.navbar-toggle:hover {
+  color: var(--accent-primary);
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-secondary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-lg);
+  white-space: nowrap;
+  transition: var(--transition-smooth);
+}
+
+.nav-button:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-subtle);
+}
+
+/* Specifically style the login buttons to stand out */
+.nav-button:has(.fa-user), .nav-button:has(.fa-user-graduate) {
+  color: var(--accent-primary);
+}
+.nav-button:has(.fa-user):hover, .nav-button:has(.fa-user-graduate):hover {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--accent-primary);
+}
+
+/* ── Elite Sidebar ── */
+.sidebar {
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border-subtle);
+  width: 260px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 24px 16px;
+  z-index: 1001; /* Above navbar for mobile */
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-smooth);
+  left: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.logo-image {
+  width: 140px;
+  height: auto;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-menu li {
+  width: 100%;
+}
+
+.sidebar-button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  width: 100%;
+  text-align: left;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-smooth);
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Magnetic hover effect indicator */
+.sidebar-button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: var(--accent-primary);
+  transform: scaleY(0);
+  transition: transform var(--transition-smooth);
+  transform-origin: left;
+}
+
+.sidebar-button:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+.sidebar-button:hover::before {
+  transform: scaleY(1);
+}
+
+.sidebar-button svg {
+  font-size: 1.1rem;
+  transition: color var(--transition-smooth);
+}
+
+.sidebar-button:hover svg {
+  color: var(--accent-primary);
+}
+
+/* ── Main Content Area ── */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-left: 260px;
+  margin-top: 70px; /* Space for navbar */
+  min-height: calc(100vh - 70px);
+  transition: margin-left var(--transition-smooth);
+  width: calc(100% - 260px);
+  background-color: var(--bg-obsidian);
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  max-width: 1400px; /* Restrict max width on massive screens */
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── Footer ── */
+.Main_footer {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  transition: margin-left var(--transition-smooth);
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  position: relative;
+  margin-top: auto;
+}
+
+/* ── Responsive Mobile/Tablet View ── */
+@media (max-width: 1024px) {
+  .navbar-content {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    left: 0;
+    justify-content: flex-start;
+  }
+
+  .main-layout, .Main_footer {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 280px;
+    transform: translateX(-100%);
+    box-shadow: none;
+  }
+
+  /* Overlay backdrop for mobile sidebar */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-smooth);
+  }
+
+  .sidebar-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sidebar-visible .sidebar {
+    transform: translateX(0);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .navbar-toggle {
+    display: inline-block;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+}

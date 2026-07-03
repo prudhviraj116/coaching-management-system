@@ -1,0 +1,356 @@
+/* ============================================
+   Staff Registration Form — Premium Dark Theme
+   ============================================ */
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #f59e0b;
+  --accent-hover: #d97706;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --input-bg: #0f172a;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --radius: 10px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Outer wrapper ── */
+.registration-form-containers {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ── Left image panel ── */
+.image-section {
+  flex: 0 0 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg, #1e293b, #0f172a);
+  overflow: hidden;
+  border-right: 1px solid var(--border-color);
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+/* ── Right form panel ── */
+.registration-forms {
+  flex: 1;
+  background: var(--bg-card);
+  padding: 36px 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ── Header row (title + close btn) ── */
+.registration-forms .d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.registration-forms h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.registration-forms .btn-close {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  filter: invert(1) brightness(0.6);
+}
+
+.registration-forms .btn-close:hover {
+  background: rgba(239, 68, 68, 0.35);
+  transform: scale(1.1);
+}
+
+/* ── Two-column row ── */
+.staff-form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* ── Single form group ── */
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+  background-color: #0f172a;
+}
+
+/* ── File input styling ── */
+.form-group input[type="file"] {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: var(--transition);
+}
+
+.form-group input[type="file"]::-webkit-file-upload-button:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* ── Designation (full-width) ── */
+.staff-form-group1 {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.staff-form-group1 label,
+.staff-form-group1 .form-group {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.staff-form-group1 select {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.staff-form-group1 select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.staff-form-group1 select option {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* ── Gender radio group ── */
+.gender-group {
+  margin-bottom: 20px;
+}
+
+.gender-group > label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.gender-options {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.gender-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.gender-options label:hover {
+  border-color: var(--accent);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.gender-options input[type="radio"] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.gender-options input[type="radio"]:checked + span,
+.gender-options input[type="radio"]:checked {
+  accent-color: var(--accent);
+}
+
+/* Highlight selected gender label */
+.gender-options label:has(input:checked) {
+  border-color: var(--accent);
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ── Submit button ── */
+.registration-forms button[type="submit"] {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.02em;
+  margin-top: 8px;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+
+.registration-forms button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+  background: linear-gradient(135deg, #fbbf24, var(--accent));
+}
+
+.registration-forms button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ── Bottom text ── */
+.sign-in-text {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.adminreg-link {
+  color: var(--accent) !important;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ── Animations ── */
+@keyframes slideInFromLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive: tablet ── */
+@media (max-width: 900px) {
+  .image-section {
+    flex: 0 0 260px;
+  }
+  .registration-forms {
+    padding: 28px 28px;
+  }
+}
+
+/* ── Responsive: mobile ── */
+@media (max-width: 640px) {
+  .registration-form-containers {
+    flex-direction: column;
+  }
+  .image-section {
+    display: none;
+  }
+  .registration-forms {
+    padding: 24px 20px;
+  }
+  .staff-form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .gender-options {
+    gap: 12px;
+  }
+}

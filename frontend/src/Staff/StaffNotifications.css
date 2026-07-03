@@ -1,0 +1,181 @@
+/* Container for the entire notifications component */
+.notification-container {
+  position: fixed; /* Fix the position relative to the viewport */
+  bottom: 120px; /* Keep it a fixed distance from the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1200px;
+  max-height: 700px; /* Set a maximum height for the container */
+  min-height: 550px;
+  min-width: 550px;
+  height: auto; /* Allow the height to adjust but be constrained by max-height */
+  top: 150px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Heading style */
+.notification-heading {
+  font-size: 1.5em; /* Size for heading */
+  margin-bottom: 35px;
+  color: rgb(26, 22, 22); /* Color for the heading */
+  text-align: center;
+  
+  
+}
+
+/* Scrollable area for notifications */
+.notification-scroll-container {
+  flex: 1; /* Take up remaining space */
+  overflow-y: auto; /* Enable vertical scrolling */
+  margin-top: 20px;
+}
+
+/* Notification list style */
+.notification-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to create rows */
+  gap: 10px; /* Gap between items */
+  
+}
+
+/* Style for individual notification items */
+.notification-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(50% - 10px); /* Two items per row, minus gap */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Style for notification content */
+.notification-content p {
+  margin: 4px 0; /* Adjust margin for better spacing */
+}
+
+/* Loading and error styles */
+.loading-container, .error-container {
+  text-align: center;
+  font-size: 1em; /* Size for messages */
+  color: #666;
+  padding: 10px;
+}
+
+.error-container {
+  color: #d9534f; /* Error color */
+}
+
+/* No notifications message */
+.no-notifications {
+  text-align: center;
+  font-size: 1em;
+  color: #999;
+}
+
+
+
+
+/* StaffNotifications.css */
+
+/* Ensure the button is positioned correctly within its container */
+.close-button-noti {
+  position: absolute;
+  top: 10px; /* Distance from the top of the container */
+  right: 10px; /* Distance from the right edge of the container */
+  background-color: #00000000; /* Red background color */
+  color: rgb(0, 0, 0); /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Make the button circular */
+  width: 30px; /* Width of the button */
+  height: 30px; /* Height of the button */
+  display: flex; /* Center the content (×) */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  font-size: 36px; /* Font size for the × symbol */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.close-button-noti:hover {
+  background-color: #08080800; /* Darker red on hover */
+}
+
+.close-button-noti:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+
+
+.notification-container {
+  padding: 20px;
+}
+
+.notification-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.close-button-noti {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  float: right;
+}
+
+.loading-container, .error-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notification-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-item.read {
+  background-color: #d4edda; /* Light green for read notifications */
+  color: #155724; /* Dark green text */
+}
+
+.notification-item.unread {
+  background-color: #f8d7da; /* Light red for unread notifications */
+  color: #721c24; /* Dark red text */
+}
+
+.read-tick {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 18px;
+  color: #155724; /* Dark green for the tick mark */
+}
+
+.no-notifications {
+  text-align: center;
+  font-style: italic;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

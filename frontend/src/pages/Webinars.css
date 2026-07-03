@@ -1,0 +1,100 @@
+/* src/components/Webinars.css */
+
+/* Container for the entire webinars section */
+.webinars-container {
+  padding: 40px;
+  background-color: #eef2f3;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.webinars-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.webinars-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.webinar-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  margin: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: slideInUp 0.5s ease-out;
+}
+
+.webinar-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.webinar-icon {
+  font-size: 60px; /* Adjust size as needed */
+  margin-bottom: 15px;
+}
+
+.webinar-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.webinar-date,
+.webinar-description,
+.webinar-speaker {
+  font-size: 16px;
+  color: #555;
+  margin: 8px 0;
+}
+
+.enroll-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.enroll-button:hover {
+  background-color: #0056b3;
+}
+
+/* Overlay for the Contact component */
+.contact-overlay {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(252, 251, 251, 0);
+}
+
+.contact-content {
+  position: relative;
+  margin-top: 10%;
+  margin-left: 200px;
+}
+
+.close-buttons {
+  position: absolute;
+  top: 15px;
+  right: 150px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: black;
+}

@@ -1,0 +1,132 @@
+/* General Footer Styles */
+.footer {
+  color: #d80f0f; /* Light text color */
+  padding: 20px 0; /* Reduced padding for a more compact footer */
+  border-top: 1px solid #006c7d; /* Darker border on top */
+  background-color: #fdf8f8; /* Light background color for contrast */
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
+  width: 100%;
+}
+
+
+
+/* Footer Top Section */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+.footer-logo img {
+  max-width: 60px; /* Further reduced logo size */
+  border-radius: 50%;
+  margin-left: 20px; /* Reduced margin */
+}
+
+/* Footer Sections */
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px; /* Reduced margin */
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 150px; /* Further reduced minimum width */
+  margin: 0 10px; /* Reduced margin between sections */
+}
+
+.footer-heading {
+  font-size: 1rem; /* Reduced font size */
+  margin-bottom: 5px; /* Reduced margin */
+  color: #3498db; /* Blue heading color */
+  text-transform: uppercase;
+  letter-spacing: 0.5px; /* Reduced letter spacing */
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 6px; /* Reduced margin */
+}
+
+.footer-section ul li a {
+  color: #020101;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #128ddf; /* Hover color */
+  font-weight: 600; /* Slightly lighter font weight */
+}
+
+/* Social Icons */
+.footer-social {
+  margin-top: 10px; /* Reduced margin */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #010000;
+  font-size: 16px; /* Further reduced font size */
+  margin: 0 6px; /* Reduced margin */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #3498db; /* Hover color */
+  transform: scale(1.1); /* Slightly smaller hover scale */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-top: 10px; /* Reduced margin */
+  border-top: 1px solid #333; /* Darker border on top */
+  padding-top: 10px; /* Reduced padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  text-align: left;
+  flex: 1;
+}
+
+.footer-info p {
+  margin: 3px 0; /* Reduced margin */
+  font-size: 0.85rem; /* Slightly smaller font size */
+}
+
+.footer-info p:first-child {
+  font-weight: bold;
+}
+
+.footer-info p:last-child {
+  font-size: 0.8rem; /* Further reduced font size */
+}
+
+.footer-sidebar-button {
+  background: none;
+  border: none;
+  color: black;
+  text-decoration: none;
+  font-size: 14px; /* Reduced font size */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px 15px; /* Reduced padding */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}

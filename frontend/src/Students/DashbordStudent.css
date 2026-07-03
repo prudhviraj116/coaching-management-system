@@ -1,0 +1,189 @@
+/* CSS Dark Premium Theme for DashbordStudent */
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #38b7ed;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.student-dashbord {
+  padding: 24px;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+/* Styles for the cards section */
+.student-dashbord-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+/* Individual card styles */
+.student-dashbord-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  margin: 0;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.student-dashbord-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.3);
+  border-color: rgba(56, 183, 237, 0.3);
+}
+
+.student-dashbord-card h3 {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.student-dashbord-card p {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Styles for the student image */
+.student-dashbord-student-img {
+  margin-top: 20px;
+  height: 240px;
+  width: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.student-dashbord-student-img:hover {
+  transform: scale(1.03) rotate(2deg);
+}
+
+/* Styles for the charts section */
+.student-dashbord-charts {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.student-dashbord-line-chart,
+.student-dashbord-pie-chart {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  margin: 0;
+  padding: 24px;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.student-dashbord-line-chart h3,
+.student-dashbord-pie-chart h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.student-dashbord-pie-chart {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.view-performance-btn {
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  margin-top: 16px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(56, 183, 237, 0.2);
+}
+
+.view-performance-btn:hover {
+  background-color: #29a0d3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(56, 183, 237, 0.3);
+}
+
+.view-performance-btn:active {
+  transform: translateY(0);
+}
+
+.StudentDashbord-table {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  margin: 24px 0 0 0;
+  padding: 24px;
+}
+
+.performance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.performance-table th, .performance-table td {
+  border: 1px solid var(--border-color);
+  padding: 14px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.performance-table th {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.performance-table tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.01);
+}
+
+.performance-table tr:hover td {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 768px) {
+  .student-dashbord-cards,
+  .student-dashbord-charts {
+    flex-direction: column;
+  }
+}

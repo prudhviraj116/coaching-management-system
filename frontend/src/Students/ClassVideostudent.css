@@ -1,0 +1,96 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.video-app {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.video-app h1 {
+  text-align: center;
+  margin-bottom: 20px; /* Added margin for spacing */
+  color: #333; /* Dark text color */
+}
+
+.video-app form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap between form elements */
+}
+
+.video-app input {
+  font-weight: bold;
+  margin-bottom: 10px; /* Added spacing between label and input */
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #555; /* Slightly darker text color */
+  width: 50%;
+  margin-left: 200px;
+}
+
+.video-app button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #f84444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self:center; /* Align button to the right */
+  transition: background-color 0.3s ease; /* Smooth transition for button */
+}
+
+.video-app button:hover {
+  background-color: #f8142a; /* Darker shade when hovered */
+}
+
+
+.video-list h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Added margin for spacing */
+  color:black; /* Dark text color */
+}
+
+.video-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.video-list li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #f9f9f9; /* Light background color for list items */
+  border: 1px solid #eee; /* Lighter border color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  transition: transform 0.2s ease; /* Smooth transition for list items */
+}
+
+.video-list li:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.video-list h3 {
+  margin-top: 0;
+  margin-bottom: 10px; /* Added margin for spacing */
+  color: #555; /* Slightly darker text color */
+}
+
+.video-list video {
+  width: 100%;
+  border-radius: 4px;
+  outline: none; /* Remove default outline */
+}
+

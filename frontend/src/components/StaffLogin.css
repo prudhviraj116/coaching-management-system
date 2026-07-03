@@ -1,0 +1,195 @@
+/* ============================================
+   Staff Login Form — Premium Dark Theme
+   ============================================ */
+
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #f59e0b; /* Amber */
+  --accent-hover: #d97706;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --input-bg: #0f172a;
+  --radius: 10px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.staffLogin-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* ── Left image panel ── */
+.staffLogin-left-side {
+  flex: 0 0 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg, #1e293b, #0f172a);
+  overflow: hidden;
+  border-right: 1px solid var(--border-color);
+}
+
+.staffLogin-side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  animation: slideInFromLeft 0.6s ease-out;
+}
+
+/* ── Right form panel ── */
+.staffLogin-right-side {
+  flex: 1;
+  background: var(--bg-card);
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.staffLogin-sign-in-form {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.staffLogin-head {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* ── Form group ── */
+.staffLogin-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.staffLogin-form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.staffLogin-form-group input {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: var(--transition);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.staffLogin-form-group input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.staffLogin-form-group input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+  background-color: #0f172a;
+}
+
+/* ── Submit button ── */
+.staffLogin-sign-in-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.02em;
+  margin-top: 10px;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+}
+
+.staffLogin-sign-in-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+  background: linear-gradient(135deg, #fbbf24, var(--accent));
+}
+
+.staffLogin-sign-in-button:active {
+  transform: translateY(0);
+}
+
+/* ── Forgot password & Links ── */
+.staffLogin-forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.staffLogin-forgot-password-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.staffLogin-forgot-password-link:hover {
+  text-decoration: underline;
+  color: #fbbf24;
+}
+
+/* ── Error message ── */
+.staffLogin-error-message {
+  margin-top: 15px;
+  padding: 12px 16px;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #fca5a5;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* ── Animations ── */
+@keyframes slideInFromLeft {
+  from { transform: translateX(-30px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .staffLogin-left-side {
+    display: none; /* Hide image on smaller screens */
+  }
+  .staffLogin-right-side {
+    padding: 40px 20px;
+  }
+}

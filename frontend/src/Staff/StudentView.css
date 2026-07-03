@@ -1,0 +1,319 @@
+/* Container for the entire component */
+.viewbatch_dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 110px;
+  left: 35%;
+  transform: translateX(-50%);
+}
+
+/* Styling for the form container */
+.viewbatch_form {
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e1e1e1;
+  backdrop-filter: blur(180px); /* Adjust blur effect */
+  margin-left: 300px;
+  color: black;
+}
+
+/* Content within the form */
+.viewbatch_content {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom:20px;
+  flex-wrap: wrap;
+  max-width: fit-content;
+
+}
+
+/* Styling for the form itself */
+.viewbatch_student_form {
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+
+.viewbatch_student_form h2{
+  margin-top: 30px;
+  color: #0b0606;
+  text-align: center;
+}
+/* Styling for input fields */
+.viewbatch_student_form input {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+/* Styling for the submit button */
+.viewbatch_submit-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0056b3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.viewbatch_submit-button:hover {
+  background-color: #004494;
+  transform: scale(1.05);
+}
+
+/* Styling for status messages */
+.p_tag {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Table container styling */
+.viewbatch_data_table {
+  margin-top: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Table styling */
+.viewbatch_data_table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.viewbatch_data_table th, .viewbatch_data_table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.viewbatch_data_table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.viewbatch_data_table tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.viewbatch_data_table tr:hover {
+  background-color: #e2e6ea;
+}
+/* Close button styles */
+.close-button-view {
+  background-color:rgba(255, 255, 255, 0.023);
+  position: absolute;
+  margin-left: 220px;
+  margin-bottom: 30px;
+  margin-top: -42px;
+  padding: 10px 15px;
+  font-size: 35px;
+  color:black;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.close-button-view:hover {
+  background-color:rgba(255, 255, 255, 0);
+  width: 0px;
+  height: 0px;
+}
+
+.filter-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.filter-container h3{
+  color: #0b0606;
+}
+/* Back arrow styling */
+.back-arrow-view {
+  position: absolute;
+  margin-left:2px;
+  margin-top: -20px;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #050505;
+  margin-bottom: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .viewbatch_student_form input, .viewbatch_submit-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .viewbatch_data_table th, .viewbatch_data_table td {
+    padding: 10px;
+  }
+}
+
+
+
+
+/* Overlay for the modal */
+.performance-modal-overlay {
+  position: fixed;
+  top: 20px;
+  left: 45px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Modal container */
+.performance-modal {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* For positioning the close button */
+}
+
+/* Close button for the modal */
+.close-button-modal {
+  background: none;
+  border: none;
+  font-size: 35px;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.close-button-modal:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Subtle background on hover */
+  transform: scale(1.1);
+}
+
+/* Button styles in the modal */
+.performance-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.performance-buttons button {
+  flex: 1;
+  margin: 0 8px;
+  padding: 12px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.performance-buttons button:hover {
+  background-color: #004494;
+  transform: scale(1.05);
+}
+
+/* Performance card styles */
+.performance-card {
+  margin-top: 20px;
+}
+
+
+/* Styling for the image */
+.student-image {
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  border-radius: 50%; /* Makes the image round */
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+  border: 2px solid #ddd; /* Adds a border around the image */
+  margin-bottom: 10px; /* Adds some space below the image */
+}
+
+/* Additional styling for student details */
+.student-details {
+  margin-left: 20px; /* Adjust spacing as needed */
+}
+
+/* Performance right section styles */
+.performance-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  margin-left: 500px; /* Adjust spacing as needed */
+  margin-top: -440px; /* Adjust spacing as needed */
+  margin-bottom: 20px; /* Adds some space below the performance details */
+  width: 50%; /* Adjust width as needed */
+  padding: 20px; /* Adds some padding around the performance details */
+}
+.performance-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  margin-right: 800px; /* Adjust spacing as needed */
+  margin-top: 80px; /* Adjust spacing as needed */
+}
+/* Container for pie chart */
+.pie-chart-container {
+  display: flex;
+  justify-content: center; /* Center pie chart horizontally */
+  width: 200px; /* Adjust this value as needed */
+  height: 200px; /* Adjust this value as needed */
+  margin-top: 20px; /* Adds some space above the pie chart */
+}
+
+
+
+
+
+
+table {
+  width: 150%;
+  border-collapse: collapse;
+  margin-right: 100px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+

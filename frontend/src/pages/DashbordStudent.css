@@ -1,0 +1,209 @@
+/* Container for the dashboard */
+.new-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+.new-header {
+  background-color: #003366; /* Dark blue background */
+  color: #e6e6e6; /* Light gray text */
+  padding: 15px 20px; /* Slightly adjusted padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.logo {
+  height: 40px; /* Adjusted height */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.new-batch-form {
+  display: flex;
+  align-items: center;
+}
+
+.new-batch-form label {
+  color: #e6e6e6;
+  margin-right: 10px;
+  font-size: 14px; /* Added font size */
+}
+
+.new-batch-form input {
+  padding: 8px;
+  border: 1px solid #006699; /* Blue border */
+  border-radius: 4px;
+  font-size: 14px; /* Added font size */
+}
+
+.new-batch-form button {
+  padding: 8px 16px;
+  background-color: #0099cc; /* Light blue button */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* Added font size */
+}
+
+.new-batch-form button:disabled {
+  background-color: #cccccc; /* Gray button when loading */
+  cursor: not-allowed;
+}
+
+/* Logout button */
+.logout-button {
+  background-color: #cc0000; /* Red background */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; /* Added font size */
+}
+
+.logout-button:hover {
+  background-color: #990000; /* Darker red on hover */
+}
+
+/* Student list section styles */
+.new-student-list-section {
+  padding: 20px;
+  background-color: #f4f4f4; /* Lighter gray background */
+}
+
+.new-student-list {
+  list-style: none;
+  padding: 0;
+}
+
+.new-student-list li {
+  padding: 12px; /* Increased padding */
+  margin: 5px 0;
+  background-color: #003366; /* Dark blue background */
+  color: #e6e6e6; /* Light gray text */
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px; /* Added font size */
+}
+
+.new-student-list li:hover {
+  background-color: #004080; /* Slightly lighter blue on hover */
+}
+
+/* Popup styles */
+.gt-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gt-popup-content {
+  background-color: #003366; /* Dark blue background */
+  color: #e6e6e6; /* Light gray text */
+  padding: 25px; /* Increased padding */
+  border-radius: 8px;
+  width: 50%;
+  max-width: 50px; /* Increased max-width */
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+}
+
+.gt-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #cc0000; /* Red background */
+  color: #fff; /* White text */
+  padding: 8px 12px; /* Adjusted padding */
+  border-radius: 50%;
+  font-size: 16px; /* Increased font size */
+}
+
+.gt-close-button:hover {
+  background-color: #990000; /* Darker red on hover */
+}
+
+.new-student-details p {
+  margin: 12px 0; /* Adjusted margin */
+  line-height: 1.5; /* Added line-height */
+}
+
+/* Pie chart container */
+.pie-chart-container {
+  margin: 20px 0;
+}
+
+/* Performance controls buttons */
+.new-performance-controls {
+  margin: 20px 0;
+}
+
+.new-performance-controls button {
+  background-color: #0099cc; /* Light blue button */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 14px; /* Added font size */
+}
+
+.new-performance-controls button:hover {
+  background-color: #0077b3; /* Darker blue on hover */
+}
+
+/* Performance tables */
+.new-performance-tables {
+  margin-top: 20px;
+}
+
+.new-performance-tables h3 {
+  color: #003366; /* Dark blue header */
+  font-size: 18px; /* Increased font size */
+}
+
+.new-performance-tables table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.new-performance-tables th, .new-performance-tables td {
+  padding: 12px; /* Increased padding */
+  text-align: left;
+  border-bottom: 1px solid #004080; /* Dark blue border */
+  font-size: 14px; /* Added font size */
+}
+
+.new-performance-tables th {
+  background-color: #003366; /* Dark blue background */
+  color: #e6e6e6; /* Light gray text */
+}
+
+.new-performance-tables tr:nth-child(even) {
+  background-color: #f0f4f8; /* Very light gray-blue row background */
+}
+
+.new-performance-tables tr:nth-child(odd) {
+  background-color: #ffffff; /* White row background */
+}
+
+.new-performance-tables td {
+  color: #333; /* Dark gray text */
+}

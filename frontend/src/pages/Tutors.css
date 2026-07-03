@@ -1,0 +1,203 @@
+/* ==========================================================================
+   Tutors.css - Elite Dark Theme & Interactions
+   ========================================================================== */
+
+.tutors-container {
+  padding: 40px 20px;
+  background-color: var(--bg-obsidian);
+  text-align: center;
+  animation: slideUpFade 0.6s ease-out;
+  min-height: 100vh;
+}
+
+.tutors-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.tutors-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutor-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 30px 20px;
+  width: 280px;
+  transition: transform var(--transition-bounce), box-shadow var(--transition-smooth), border-color var(--transition-fast);
+  position: relative; 
+  overflow: hidden; 
+  cursor: pointer;
+}
+
+.tutor-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-glow);
+  border-color: var(--accent-primary);
+  background: var(--bg-surface-hover);
+}
+
+.tutor-image,
+.tutor-icon {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--accent-secondary);
+  padding: 4px;
+  background: var(--bg-obsidian);
+}
+
+.tutor-icon {
+  color: var(--accent-secondary);
+}
+
+.tutor-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.tutor-card:hover .tutor-name {
+  color: var(--accent-primary);
+}
+
+.tutor-subject {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--accent-secondary);
+}
+
+.tutor-experience {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.tutor-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Old popup replaced with subtle tooltip hover */
+.tutor-popup {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(16, 185, 129, 0.95);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tutor-card:hover .tutor-popup {
+  bottom: 0;
+}
+
+/* ── Modal Pop-up ── */
+.new-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-smooth);
+}
+
+.new-popup-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.new-popup-content {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-focus);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  max-width: 450px;
+  width: 90%;
+  box-shadow: var(--shadow-glow);
+  color: var(--text-secondary);
+  text-align: left;
+  transform: scale(0.95);
+  transition: transform var(--transition-bounce);
+}
+
+.new-popup-overlay.active .new-popup-content {
+  transform: scale(1);
+}
+
+.popup-headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 15px;
+}
+
+.popup-headers h2 {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.popup-close {
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-weight: bold;
+  transition: color var(--transition-fast);
+  line-height: 1;
+}
+
+.popup-close:hover {
+  color: #ef4444; /* Red for close */
+}
+
+.new-popup-content div {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.new-popup-content strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+@media (max-width: 600px) {
+  .new-popup-content {
+    max-width: 95%;
+    width: 100%;
+    padding: 20px;
+  }
+}

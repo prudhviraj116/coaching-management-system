@@ -1,0 +1,131 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the login layout */
+.world-admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  background: linear-gradient(to bottom right, #d64545, #f7983d);
+}
+
+.world-admin-login-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 350px;
+}
+
+.world-admin-login-header {
+  margin-bottom: 20px;
+}
+
+.world-admin-login-icon-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.world-admin-login-header h2 {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.world-admin-input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+}
+
+.world-admin-input-icon {
+  margin-right: 10px;
+  color: #f45b69;
+}
+
+.world-admin-input-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  color: #333;
+}
+
+.world-admin-options {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  justify-content: space-between; /* Distribute space between elements */
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.world-admin-options label {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  color: #333;
+}
+
+.world-admin-options input[type="checkbox"] {
+  margin-right: 10px; /* Space between checkbox and label text */
+  margin-top: 5px;
+}
+
+.world-admin-options a {
+  color: #333;
+  text-decoration: none;
+}
+
+.world-admin-options a:hover {
+  color: #007bff; /* Optional: change color on hover */
+}
+
+
+.world-admin-button {
+  background-color: #d64545;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.world-admin-button:hover {
+  background-color: #c43c3c;
+}
+
+.world-admin-register {
+  margin-top: 20px;
+}
+
+.world-admin-register p {
+  color: #333;
+  font-size: 14px;
+}
+
+.world-admin-register-button {
+  display: block;
+  margin-top: 10px;
+  background-color: #f7983d;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.world-admin-register-button:hover {
+  background-color: #e28a2c;
+}

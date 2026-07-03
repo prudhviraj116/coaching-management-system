@@ -1,0 +1,150 @@
+/* Container styles */
+.main_container1 {
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  max-width: 900px;
+  width: 50%;
+  box-shadow: 0 3px 6px rgba(12, 12, 12, 0.607);
+  overflow: hidden;
+  position: absolute; /* Fixed position to stay in viewport */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  border-radius: 5px;
+  backdrop-filter: blur(190px); /* Adjust blur effect */
+  z-index: 1000; /* Ensure it appears above other content */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Button styles */
+.section-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.section-buttons button {
+  background:rgba(255, 68, 0, 0.91);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin: 0 10px; /* Space between buttons */
+}
+
+.section-buttons button:hover {
+  background: #fb6e03;
+}
+
+/* Ensure visibility of .staff-task-center */
+.staff-task-center {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%; /* Ensure it adapts to the container width */
+  margin: 0 auto;
+}
+.staff-task-center h2{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f8f5f5;
+}
+/* Task card styles */
+
+.task-cards{
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  animation: slideIn 0.5s ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 60vh;
+}
+.task-cards h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.task-cards textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  resize: vertical; /* Allow users to resize vertically */
+}
+
+.task-cards input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.task-cards select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.task-cards button {
+  background: #47a0e9;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.task-cards button:hover {
+  background: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .section-buttons {
+    flex-direction: column;
+  }
+
+  .section-buttons button {
+    margin: 5px 0; /* Stack buttons vertically on small screens */
+  }
+}
+
+/* Close Button Styles */
+.staff-close-button {
+  background: #fffefe00;
+  color: rgb(16, 16, 16);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 45px;
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  width: 0px;
+  height: 0px;
+  transition: background 0.3s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.staff-close-button:hover {
+  background: #e5383500;
+}
