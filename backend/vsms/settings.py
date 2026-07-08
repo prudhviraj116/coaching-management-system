@@ -76,48 +76,16 @@ TEMPLATES = [
 WSGI_APPLICATION = "vsms.wsgi.application"
 
 # Database Configuration
-USE_POSTGRES = os.getenv("USE_POSTGRES", "False") == "True"
-
-if USE_POSTGRES and os.getenv("DATABASE_URL"):
-    try:
-        import dj_database_url
-        DATABASES = {
-            "default": {
-                **dj_database_url.config(default=os.getenv("DATABASE_URL")),
-                "CONN_MAX_AGE": 600,  # Connection pooling
-                "ATOMIC_REQUESTS": True,  # Atomic database transactions
-            }
-        }
-    except ImportError:
-        raise ImportError(
-            "dj_database_url is required for PostgreSQL support. "
-            "Install it with: pip install dj-database-url"
-        )
-elif os.getenv("DB_NAME"):
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.mysql",
-            "NAME": os.getenv("DB_NAME", "vcubedb"),
-            "USER": os.getenv("DB_USER", "root"),
-            "PASSWORD": os.getenv("DB_PASSWORD", "prudhviraj@007"),
-            "HOST": os.getenv("DB_HOST", "localhost"),
-            "PORT": os.getenv("DB_PORT", "3306"),
-            "OPTIONS": {
-                "charset": "utf8mb4",  # Ensures Unicode support
-                "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
-                "autocommit": True,
-            },
-            "CONN_MAX_AGE": 600,  # Connection pooling
-            "ATOMIC_REQUESTS": True,  # Atomic database transactions
-        }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": os.environ.get("DB_NAME"),
+        "USER": os.environ.get("DB_USER"),
+        "PASSWORD": os.environ.get("DB_PASSWORD"),
+        "HOST": os.environ.get("DB_HOST"),
+        "PORT": os.environ.get("DB_PORT", "3306"),
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
+}
 
 # Django Rest Framework
 REST_FRAMEWORK = {
